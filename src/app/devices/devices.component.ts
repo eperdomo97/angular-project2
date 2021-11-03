@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { DeviceService } from '../device.service';
 import { Device } from '../models/device'; 
 import { Plan } from '../models/plan';
 import { PlanService } from '../plan.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-devices',
@@ -14,9 +15,9 @@ export class DevicesComponent implements OnInit {
 
   deviceList!: Device[];
   planList!: Plan[];
- 
+  name: any
 
-  constructor(private deviceService: DeviceService, private planService : PlanService  ){}
+  constructor(private deviceService: DeviceService, private planService : PlanService   ){}
 
 
   ngOnInit(): void {
@@ -33,11 +34,8 @@ export class DevicesComponent implements OnInit {
 
 	}
 
-  remove(value: String){
-    console.log(value);
-    this.deviceService.deleteDevice(value).subscribe(result => {
-      console.log(result);
-    })
+  remove(){
+    
 
   }
 
