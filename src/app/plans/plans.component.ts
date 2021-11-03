@@ -28,9 +28,9 @@ export class PlansComponent implements OnInit {
 	}
 
 
-  listA = {  
-    "planName" : "Ultimate Plan",
-    "planPrice" : 455.00,
+  basicPlan = {  
+    "planName" : "Basic Plan",
+    "planPrice" : 50.00,
     "planNumLines" : 1,
     	};
  
@@ -43,10 +43,10 @@ export class PlansComponent implements OnInit {
 
   }
 
-  listB = {  
-    "planName" : "Normal Plan",
-  "planPrice" : 300.00,
-  "planNumLines" : 1,
+  standardPlan = {  
+    "planName" : "Standard Plan",
+  "planPrice" : 100.00,
+  "planNumLines" : 2,
 
  };  
   planB(){
@@ -58,10 +58,10 @@ export class PlansComponent implements OnInit {
   }
 
 
-  listC = {  
-    "planName" : "Cheap Plan",
-    "planPrice" : 100.00,
-    "planNumLines" : 1,
+  familyPlan = {  
+    "planName" : "Family Plan",
+    "planPrice" : 150.00,
+    "planNumLines" : 4,
  };  
   planC(){
     console.log("clicked C")
