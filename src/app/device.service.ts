@@ -9,7 +9,7 @@ export class DeviceService {
   
    url='http://localhost:8080'
 
-   deviceId: any
+   planId: any
 
   constructor(private httpClient : HttpClient) { }
 

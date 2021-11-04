@@ -21,7 +21,7 @@ export class DevicesComponent implements OnInit {
 
   ngOnInit(): void {
 
-		this.deviceService.getById(this.deviceService.deviceId).subscribe(result => {
+		this.deviceService.getById(this.deviceService.planId).subscribe(result => {
 			this.deviceList = result;	
       console.log(	this.deviceList);
 		})
@@ -33,7 +33,7 @@ export class DevicesComponent implements OnInit {
 
     this.planName = this.planService.planName
     
-    console.log(this.deviceService.deviceId + " --" + this.planService.planName)
+    console.log(this.deviceService.planId + " --" + this.planService.planName)
 
 	}
 
