@@ -14,14 +14,14 @@ export class DevicesComponent implements OnInit {
 
   deviceList!: Device[];
   planList!: Plan[];
- 
+  planName: any
 
   constructor(private deviceService: DeviceService, private planService : PlanService  ){}
 
 
   ngOnInit(): void {
 
-		this.deviceService.getAllDevices().subscribe(result => {
+		this.deviceService.getById(this.deviceService.deviceId).subscribe(result => {
 			this.deviceList = result;	
       console.log(	this.deviceList);
 		})
@@ -30,6 +30,10 @@ export class DevicesComponent implements OnInit {
 			this.planList = result;	
       console.log(result);
 		})
+
+    this.planName = this.planService.planName
+    
+    console.log(this.deviceService.deviceId + " --" + this.planService.planName)
 
 	}
 

@@ -9,10 +9,12 @@ export class DeviceService {
   
    url='http://localhost:8080'
 
+   deviceId: any
+
   constructor(private httpClient : HttpClient) { }
 
-  getAllDevices(): Observable<any>{
-    return this.httpClient.get(this.url + '/devices');
+  getById(value : any): Observable<any>{
+    return this.httpClient.get(this.url + '/devices/' + value);
   }
 
   deleteDevice(value : String): Observable<any>{

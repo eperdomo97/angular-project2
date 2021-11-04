@@ -12,11 +12,10 @@
 
       url='http://localhost:8080'
 
-
+      planName: any
  
 
       constructor(private httpClient : HttpClient) { }
-
 
 
       getAllPlans(): Observable<any> {
@@ -27,6 +26,8 @@
         console.log(value+ "---deviceservice")
         return this.httpClient.delete(this.url + '/plans/'+ value)
       }
+
+      
 
 
 

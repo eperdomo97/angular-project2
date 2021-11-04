@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceService } from '../device.service';
 import { Plan } from '../models/plan';
 import { PlanService } from '../plan.service';
 
@@ -14,8 +15,9 @@ export class AccountComponent implements OnInit {
   grandTotal = 0;
 
   planList!: Plan[];
+  
 
-  constructor(private planService : PlanService) { }
+  constructor(private planService : PlanService, private deviceService : DeviceService) { }
 
   ngOnInit(): void {
     this.planService.getAllPlans().subscribe(result => {
@@ -39,6 +41,11 @@ export class AccountComponent implements OnInit {
       console.log(result);
     })
 
+  }
+
+  view(value: any, name: any){
+    this.deviceService.deviceId = value;
+    this.planService.planName= name
   }
 
 }
