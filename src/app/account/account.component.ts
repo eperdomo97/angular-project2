@@ -41,16 +41,10 @@ export class AccountComponent implements OnInit {
 
   }
 
-<<<<<<< HEAD
   view(value: any, name: any, line:any){
     this.deviceService.numbLines = line;
     this.deviceService.planId = value;
     this.planService.planName= name;
-=======
-  view(value: any, name: any) {
-    this.deviceService.planId = value;
-    this.planService.planName = name
->>>>>>> f8f5bcc0c1f0138af40b2eb10dbc486e855ed933
   }
 
 }

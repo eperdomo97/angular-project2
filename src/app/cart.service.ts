@@ -9,11 +9,7 @@ import { Plan } from './models/plan';
 
 export class CartService {
 
-<<<<<<< HEAD
-    url='http://localhost:8080/plans/cart'
-=======
   url = 'https://telecom-application-ma.azurewebsites.net/plans/cart'
->>>>>>> f8f5bcc0c1f0138af40b2eb10dbc486e855ed933
 
   a = "false";
   b = "false";

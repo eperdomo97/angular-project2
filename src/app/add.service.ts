@@ -9,11 +9,7 @@ import { Device } from './models/device';
 
 export class AddService {
 
-<<<<<<< HEAD
-    url='http://localhost:8080/devices/add'
-=======
   url = 'https://telecom-application-ma.azurewebsites.net/devices/add'
->>>>>>> f8f5bcc0c1f0138af40b2eb10dbc486e855ed933
 
   constructor(private httpClient: HttpClient) { }
 
