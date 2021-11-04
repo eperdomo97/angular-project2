@@ -12,7 +12,7 @@ import { PlansComponent } from './plans/plans.component';
 
 export class CartService {
 
-    url='http://localhost:8080/plans/cart'
+    url='https://telecom-application-ma.azurewebsites.net/plans/cart'
 
   a = "false";
   b = "false";

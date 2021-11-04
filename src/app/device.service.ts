@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DeviceService {
   
-   url='http://localhost:8080'
+   url='https://telecom-application-ma.azurewebsites.net'
 
    planId: any
 
