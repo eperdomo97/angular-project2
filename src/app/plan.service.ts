@@ -10,7 +10,7 @@
 
     export class PlanService {
 
-      url='https://telecom-application-ma.azurewebsites.net'
+      url='http://localhost:8080/'
 
       planName: any
  

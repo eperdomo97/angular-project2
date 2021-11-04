@@ -16,15 +16,27 @@ export class DevicesComponent implements OnInit {
   planList!: Plan[];
   planName: any
 
-  constructor(private deviceService: DeviceService, private planService : PlanService  ){}
+
+  constructor(private deviceService: DeviceService, private planService : PlanService  ){ }
 
 
   ngOnInit(): void {
 
 		this.deviceService.getById(this.deviceService.planId).subscribe(result => {
 			this.deviceList = result;	
-      console.log(	this.deviceList);
+
+      if(this.deviceList.length >= this.deviceService.numbLines ){
+        (document.getElementById('addDevice') as HTMLElement).hidden = true
+
+      }
+      else{
+        (document.getElementById('addDevice') as HTMLElement).hidden = false
+      }
+
+      console.log(this.deviceList.length);
 		})
+
+    
 
     this.planService.getAllPlans().subscribe(result => {
 			this.planList = result;	
@@ -33,7 +45,8 @@ export class DevicesComponent implements OnInit {
 
     this.planName = this.planService.planName
     
-    console.log(this.deviceService.planId + " --" + this.planService.planName)
+    
+    console.log(this.deviceService.planId + " --" + this.planService.planName + " ---" + this.deviceService.numbLines)
 
 	}
 
