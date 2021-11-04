@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shopping Cart</title>
+    <title>Confirmation</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -20,7 +20,7 @@
           <div class="title">
             <div class="row">
               <div class="col">
-                <h4><b>Shopping Cart</b></h4>
+                <h4><b>Confirmation For Plan</b></h4>
               </div>
             </div>
           </div>
@@ -28,32 +28,25 @@
             <div class="row main align-items-center">
               <div class="col">
                 <div class="row text-muted">{{ name }}</div>
-                <div class="row">{{ numLines }} Lines</div>
               </div>
-              <div class="col">something here</div>
+              <div class="col">{{ numLines }} Lines</div>
               <div class="col">&dollar; {{ price }}</div>
             </div>
-          </div>
-          <div class="row">
-            <div class="row main align-items-center"></div>
-          </div>
-          <div class="row border-top border-bottom">
-            <div class="row main align-items-center"></div>
           </div>
         </div>
         <div class="col-md-4 summary">
           <div>
             <h5><b>Summary</b></h5>
           </div>
-          <hr />
           <div
             class="row"
             style="border-top: 1px solid rgba(39, 10, 121, 0.1); padding: 2vh 0"
           >
-            <div class="col">TOTAL PRICE</div>
+            <div class="col">MONTHLY PRICE</div>
             <div class="col text-right">&dollar; {{ price }}</div>
           </div>
-          <button class="btn" (click)="done()" routerLink="/home">Done</button>
+          <button class="btn btn-success" (click)="done()" routerLink="/home">Accept</button>
+          <button class="btn btn-danger" routerLink="/home">Cancel</button>
         </div>
       </div>
     </div>
