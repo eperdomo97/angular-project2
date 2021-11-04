@@ -15,13 +15,12 @@ export class AccountComponent implements OnInit {
   grandTotal = 0;
 
   planList!: Plan[];
-  
 
-  constructor(private planService : PlanService, private deviceService : DeviceService) { }
+  constructor(private planService: PlanService, private deviceService: DeviceService) { }
 
   ngOnInit(): void {
     this.planService.getAllPlans().subscribe(result => {
-			this.planList = result;	
+      this.planList = result;
 
       this.planList.forEach(plan => {
         this.subTotal += plan.planPrice;
@@ -31,22 +30,27 @@ export class AccountComponent implements OnInit {
 
       this.grandTotal = this.subTotal + this.taxTotal;
 
-		})
+    })
 
   }
 
-  remove(value: number){
-    console.log(value);
+  remove(value: number) {
     this.planService.deletePlan(value).subscribe(result => {
       console.log(result);
     })
 
   }
 
+<<<<<<< HEAD
   view(value: any, name: any, line:any){
     this.deviceService.numbLines = line;
     this.deviceService.planId = value;
     this.planService.planName= name;
+=======
+  view(value: any, name: any) {
+    this.deviceService.planId = value;
+    this.planService.planName = name
+>>>>>>> f8f5bcc0c1f0138af40b2eb10dbc486e855ed933
   }
 
 }
