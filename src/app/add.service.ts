@@ -10,7 +10,7 @@ import { Device } from './models/device';
 
 export class AddService {
 
-    url='http://localhost:8080/devices/add'
+    url='https://telecom-application-ma.azurewebsites.net/devices/add'
 
   
 
