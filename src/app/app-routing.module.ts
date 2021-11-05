@@ -8,13 +8,13 @@ import { AccountComponent } from './account/account.component';
 import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
-  {path: 'plans', component: PlansComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'devices', component: DevicesComponent},
-  {path: 'account', component: AccountComponent},
-  {path: 'plans/cart', component: CartComponent},
-  {path: 'devices/add', component: AddComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'plans', component: PlansComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'devices', component: DevicesComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'plans/cart', component: CartComponent },
+  { path: 'devices/add', component: AddComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
