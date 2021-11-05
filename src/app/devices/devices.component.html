@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Devices</title>
+    <title>User dashboard</title>
     <!-- Bootstrap core CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -39,14 +39,13 @@
               <div class="col user-to">
                 <td class="addClick">
                   Add New Device
-                  <a
+                  <i
                     class="fa fa-user-plus"
-                    id="addDevice"
                     width="15"
                     height="15"
                     title="Add"
                     routerLink="/devices/add"
-                  ></a>
+                  ></i>
                 </td>
               </div>
 
@@ -64,10 +63,10 @@
               </thead>
               <tbody>
                 <tr *ngFor="let device of deviceList">
-                  <td class="no">{{ device.deviceName }}</td>
+                  <td class="no">{{device.deviceName}}</td>
                   <td class="text-left">{{ device.deviceType }}</td>
                   <td class="text-left">{{ device.deviceNumber }}</td>
-                  <td class="text-left">{{ planName }}</td>
+                  <td class="text-left">{{planName}}</td>
                   <!-- <td class="total">$0.00</td> -->
                   <td class="removeClick">
                     <i

@@ -7,14 +7,20 @@ import { Device } from './models/device';
   providedIn: 'root'
 })
 
+
 export class AddService {
 
-  url = 'https://telecom-application-ma.azurewebsites.net/devices/add'
+    url='https://telecom-application-ma.azurewebsites.net/devices/add'
 
-  constructor(private httpClient: HttpClient) { }
+  
 
+  constructor(private httpClient : HttpClient) { }
+   
   saveDevice(device: Device): Observable<any> {
     return this.httpClient.post(this.url, device)
   }
+
+
+
 
 }

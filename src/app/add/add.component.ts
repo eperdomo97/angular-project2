@@ -16,48 +16,48 @@ export class AddComponent implements OnInit {
   temp: any
   planId: any
   newDevice: Device
-  city: any
+  city:any
   tempNum: any
 
 
-  constructor(private addService: AddService, private deviceService: DeviceService) {
+  constructor(private addService: AddService, private deviceService: DeviceService){
     this.newDevice = new Device();
   }
 
   ngOnInit(): void {
   }
+  
 
-
-  add() {
+  add(){
     this.name = (<HTMLInputElement>document.getElementById("inputName")).value;
     this.type = (<HTMLInputElement>document.getElementById("inputType")).value;
     this.number = (<HTMLInputElement>document.getElementById("inputNumber")).value;
 
 
-    switch (this.number.length) {
+    switch (this.number .length) {
       case 10:
-        this.city = this.number.slice(0, 3);
-        this.tempNum = this.number.slice(3);
-        break;
-    }
+          this.city = this.number.slice(0, 3);
+          this.tempNum =  this.number.slice(3);
+          break;
+  }
 
-    this.tempNum = this.tempNum.slice(0, 3) + '-' + this.tempNum.slice(3);
-    this.number = (this.city + "-" + this.tempNum).trim()
+  this.tempNum = this.tempNum.slice(0, 3) + '-' + this.tempNum.slice(3);
+ this.number = (this.city + "-" + this.tempNum).trim()
 
 
-    this.temp = {
-      "deviceName": this.name,
-      "deviceType": this.type,
-      "deviceNumber": this.number,
-      "planId": this.deviceService.planId
-    }
+  this.temp = {
+    "deviceName" : this.name ,
+    "deviceType": this.type,
+    "deviceNumber": this.number,
+    "planId" : this.deviceService.planId
+  }
 
-    this.newDevice = this.temp
+  this.newDevice = this.temp
 
     this.addService.saveDevice(this.newDevice).subscribe(result => {
       console.log(result);
     })
-
+    
   }
 
 

@@ -1,26 +1,35 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+    import { Injectable } from '@angular/core';
+    import { Observable } from 'rxjs';
+    import { HttpClient } from '@angular/common/http';
+    import { Plan } from './models/plan';
 
-@Injectable({
-  providedIn: 'root'
-})
+    @Injectable({
+      providedIn: 'root'
+    })
 
-export class PlanService {
 
-  url = 'https://telecom-application-ma.azurewebsites.net'
+    export class PlanService {
 
-  planName: any
+      url='https://telecom-application-ma.azurewebsites.net'
 
-  constructor(private httpClient: HttpClient) { }
+      
+      planName: any
+ 
 
-  getAllPlans(): Observable<any> {
-    return this.httpClient.get(this.url + '/plans');
-  }
+      constructor(private httpClient : HttpClient) { }
 
-  deletePlan(value: number): Observable<any> {
-    console.log(value + "---deviceservice")
-    return this.httpClient.delete(this.url + '/plans/' + value)
-  }
 
-}
+      getAllPlans(): Observable<any> {
+        return this.httpClient.get(this.url + '/plans');
+      }
+
+      deletePlan(value : number): Observable<any>{
+        console.log(value+ "---deviceservice")
+        return this.httpClient.delete(this.url + '/plans/'+ value)
+      }
+
+      
+
+
+
+    }
