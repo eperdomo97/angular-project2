@@ -25,7 +25,7 @@ export class PlansComponent implements OnInit {
 
   basicPlan = {
     "planName": "Basic Plan",
-    "planPrice": 50.00,
+    "planPrice": 50,
     "planNumLines": 1,
   };
 
@@ -37,7 +37,7 @@ export class PlansComponent implements OnInit {
 
   standardPlan = {
     "planName": "Standard Plan",
-    "planPrice": 100.00,
+    "planPrice": 100,
     "planNumLines": 2,
 
   };
@@ -49,7 +49,7 @@ export class PlansComponent implements OnInit {
 
   familyPlan = {
     "planName": "Family Plan",
-    "planPrice": 150.00,
+    "planPrice": 150,
     "planNumLines": 4,
   };
 
