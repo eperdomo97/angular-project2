@@ -18,7 +18,7 @@
     <div class="container py-3">
       <header>
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-          <h1 i18n class="display-4 fw-normal">Phone Plans</h1>
+          <h1 class="display-4 fw-normal">Phone Plans</h1>
         </div>
       </header>
 
@@ -29,8 +29,8 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-price">
                   <div class="deal-top">
-                    <h3 i18n>Basic Plan</h3>
-                    <h4>{{basicPlan.planPrice | currency}}</h4>
+                    <h3>Basic Plan</h3>
+                    <h4>$50</h4>
                   </div>
                   <div class="deal-bottom">
                     <ul class="deal-item">
@@ -38,13 +38,13 @@
                        <b>{{item.key}}</b> : <b>{{item.value}}</b>
                     </li>-->
 
-                      <li i18n>Number of Devices: {{ basicPlan.planNumLines }}</li>
-                      <li i18n>5G Included</li>
-                      <li i18n>Unlimited talk, text & data</li>
-                      <li i18n>25GB of Premium Data</li>
+                      <li>Number of Devices: {{ basicPlan.planNumLines }}</li>
+                      <li>5G Included</li>
+                      <li>Unlimited talk, text & data</li>
+                      <li>25GB of Premium Data</li>
                     </ul>
                     <div class="btn-area">
-                      <a i18n
+                      <a
                         class="nav-link active"
                         (click)="planA()"
                         routerLink="/plans/cart"
@@ -58,8 +58,8 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-price">
                   <div class="deal-top">
-                    <h3 i18n>Standard Plan</h3>
-                    <h4>{{standardPlan.planPrice | currency}}</h4>
+                    <h3>Standard Plan</h3>
+                    <h4>$100</h4>
                   </div>
                   <div class="deal-bottom">
                     <ul class="deal-item">
@@ -67,15 +67,15 @@
                        <b>{{item.key}}</b> : <b>{{item.value}}</b>
                       </li>-->
 
-                      <li i18n>
+                      <li>
                         Number of Devices: {{ standardPlan.planNumLines }}
                       </li>
-                      <li i18n>5G Included</li>
-                      <li i18n>Unlimited talk, text & data</li>
-                      <li i18n>25GB of Premium Data</li>
+                      <li>5G Included</li>
+                      <li>Unlimited talk, text & data</li>
+                      <li>25GB of Premium Data</li>
                     </ul>
                     <div class="btn-area">
-                      <a i18n
+                      <a
                         class="nav-link active"
                         (click)="planB()"
                         routerLink="/plans/cart"
@@ -88,8 +88,8 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-price">
                   <div class="deal-top">
-                    <h3 i18n>Family Plan</h3>
-                    <h4>{{familyPlan.planPrice | currency}}</h4>
+                    <h3>Family Plan</h3>
+                    <h4>$150</h4>
                   </div>
                   <div class="deal-bottom">
                     <ul class="deal-item">
@@ -97,13 +97,13 @@
                        <b>{{item.key}}</b> : <b>{{item.value}}</b>
                       </li>-->
 
-                      <li i18n>Number of Devices: {{ familyPlan.planNumLines }}</li>
-                      <li i18n>5G Included</li>
-                      <li i18n>Unlimited talk, text & data</li>
-                      <li i18n>25GB of Premium Data</li>
+                      <li>Number of Devices: {{ familyPlan.planNumLines }}</li>
+                      <li>5G Included</li>
+                      <li>Unlimited talk, text & data</li>
+                      <li>25GB of Premium Data</li>
                     </ul>
                     <div class="btn-area">
-                      <a i18n
+                      <a
                         class="nav-link active"
                         (click)="planC()"
                         routerLink="/plans/cart"

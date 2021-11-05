@@ -13,17 +13,10 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "es": "src/locales/messages.es.xlf"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": true,
             "outputPath": "dist/angular-project2",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -40,11 +33,6 @@
             "scripts": []
           },
           "configurations": {
-            "es": {
-              "localize": [
-                "es"
-              ]
-            },
             "production": {
               "budgets": [
                 {
@@ -80,9 +68,6 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "es": {
-              "browserTarget": "angular-project2:build:es"
-            },
             "production": {
               "browserTarget": "angular-project2:build:production"
             },

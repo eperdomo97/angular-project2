@@ -32,7 +32,7 @@ export class PlansComponent implements OnInit {
     "planName" : "Basic Plan",
     "planPrice" : 50.00,
     "planNumLines" : 1,
-    };
+    	};
  
   planA(){
     console.log("clicked A")
@@ -45,10 +45,10 @@ export class PlansComponent implements OnInit {
 
   standardPlan = {  
     "planName" : "Standard Plan",
-    "planPrice" : 100.00,
-    "planNumLines" : 2,
-  };
+  "planPrice" : 100.00,
+  "planNumLines" : 2,
 
+ };  
   planB(){
     console.log("clicked B")
 
@@ -61,8 +61,8 @@ export class PlansComponent implements OnInit {
   familyPlan = {  
     "planName" : "Family Plan",
     "planPrice" : 150.00,
-    "planNumLines" : 4
-  };  
+    "planNumLines" : 4,
+ };  
   planC(){
     console.log("clicked C")
     this.cartService.a = "false";
